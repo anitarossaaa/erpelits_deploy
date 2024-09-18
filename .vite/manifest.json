@@ -407,6 +407,10 @@
     "file": "assets/compiled/svg/zw.svg",
     "src": "assets/static/images/flags/zw.svg"
   },
+  "assets/static/images/logo/favicon.png": {
+    "file": "assets/compiled/png/favicon.png",
+    "src": "assets/static/images/logo/favicon.png"
+  },
   "assets/static/images/logo/logo.png": {
     "file": "assets/compiled/png/logo.png",
     "src": "assets/static/images/logo/logo.png"

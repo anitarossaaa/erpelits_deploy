@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Application - Mazer Admin Dashboard</title>
+    <title>Dashboard - Mazer Admin Dashboard</title>
     
     <link rel="shortcut icon" href="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Layer_1'%20data-name='Layer%201'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202000%202000'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23fff;%20}%20.cls-2%20{%20fill:%20%23321fb3;%20}%20.cls-3%20{%20fill:%20%23fc040c;%20}%20%3c/style%3e%3c/defs%3e%3ccircle%20class='cls-1'%20cx='1000'%20cy='1000'%20r='978.54'/%3e%3crect%20class='cls-3'%20x='851.98'%20y='908.87'%20width='1024.96'%20height='183.16'/%3e%3cpath%20class='cls-3'%20d='m851.98,1114.92s9.13,80.13,28.08,114.47h301.87s-20.36-54.37-29.49-114.47h-300.47Z'/%3e%3cpath%20class='cls-3'%20d='m891.3,1256.58s23.87,55.81,46.33,87.29h346.8s-49.14-17.17-92.67-87.29h-300.47Z'/%3e%3cpath%20class='cls-3'%20d='m947.46,1363.9h853.67s-12.64,33.63-28.08,47.22h-793.29s-22.07-25.26-32.29-47.22Z'/%3e%3cpath%20class='cls-3'%20d='m993.79,1424.71h765.21s-23.87,35.06-45.63,46.5h-675.35s-24.57-8.59-44.23-46.5Z'/%3e%3cpath%20class='cls-3'%20d='m1072.42,1495.54h622.7s-63.88,41.85-82.84,43.64h-470.36s-33-7.87-69.5-43.64Z'/%3e%3cpath%20class='cls-3'%20d='m1163.68,1547.05h435.96s-193.41,88.7-435.96,0Z'/%3e%3cpath%20class='cls-3'%20d='m1558.57,1256.58h301.17s-22.82,59.74-50.55,87.29h-326.44s50.2-23.25,75.82-87.29Z'/%3e%3cpath%20class='cls-3'%20d='m1159.47,875.96h-303.28s2.11-53.3,30.19-114.11h296.26s-17.9,35.41-23.17,114.11Z'/%3e%3cpath%20class='cls-3'%20d='m894.81,739.67h301.17s46.68-65.11,105.3-86.57h-359.44s-21.49,19.04-47.04,86.57Z'/%3e%3cpath%20class='cls-3'%20d='m952.37,633.06h827.69s-14.39-33.98-30.89-44.36h-765.21s-6.71,5.72-31.59,44.36Z'/%3e%3cpath%20class='cls-3'%20d='m1008.53,560.09h719.58s-12.64-22.89-40.02-41.5h-632.53s-31.24,20.03-47.04,41.5Z'/%3e%3cpath%20class='cls-3'%20d='m1075.93,498.56h576.37s-32.64-29.69-67.39-40.78h-438.77s-34.71,9.96-70.2,40.78Z'/%3e%3cpath%20class='cls-3'%20d='m1195.98,436.31h338.38s-153.74-90.15-338.38,0Z'/%3e%3cpath%20class='cls-3'%20d='m1449.41,653.1h343.53s26.68,23.73,41.19,86.57h-280.34s-48.91-62.84-104.37-86.57Z'/%3e%3cpath%20class='cls-3'%20d='m1565.48,761.84h275.66s26.91,55.21,31.36,112.92h-274.73s-20.59-90.74-32.29-112.92Z'/%3e%3cpolyline%20class='cls-2'%20points='800.02%20908.87%20800.02%201092.02%20123.06%201092.02%20123.06%20908.87'/%3e%3cpath%20class='cls-2'%20d='m831.02,761.84c-27.65,53.12-32.42,114.11-32.42,114.11H128.31l702.71-114.11Z'/%3e%3cpath%20class='cls-3'%20d='m836.25,739.67l42.91-86.57s-21.6,21.77-42.91,86.57Z'/%3e%3cpath%20class='cls-3'%20d='m880.16,633.06l36.23-44.36s-26.7,24.33-36.23,44.36Z'/%3e%3cpath%20class='cls-3'%20d='m934.04,560.09l43.38-41.5s-24.31,12.88-43.38,41.5Z'/%3e%3cpath%20class='cls-3'%20d='m998.34,498.56l58.16-40.78s-32.67,12.96-58.16,40.78Z'/%3e%3cpath%20class='cls-3'%20d='m1075.93,436.31l98.33-40.07s-60.95,9.56-98.33,40.07Z'/%3e%3cpath%20class='cls-2'%20d='m831.02,761.84H167.39s-33.83,51.54-39.08,114.11'/%3e%3cpath%20class='cls-2'%20d='m1078.77,436.31l98.33-40.07h-606.88s-44.81,18.6-75.32,40.07h583.88Z'/%3e%3cpath%20class='cls-2'%20d='m879.16,653.1H230.32s-16.8,11.81-52.44,86.57h658.37'/%3e%3cpath%20class='cls-2'%20d='m916.4,588.71H282.76s-27.65,24.33-40.05,44.36h637.45'/%3e%3cpath%20class='cls-2'%20d='m977.43,518.59H369.05s-31.94,12.88-59.12,41.5h624.11'/%3e%3cpath%20class='cls-2'%20d='m1056.5,457.78H461.54s-42.91,20.75-67.7,40.78h604.5'/%3e%3cpath%20class='cls-2'%20d='m833.36,1238.16c-27.65-53.12-32.42-114.11-32.42-114.11H130.66l702.71,114.11Z'/%3e%3cpath%20class='cls-2'%20d='m833.36,1238.16H169.74s-33.83-51.54-39.08-114.11'/%3e%3cpath%20class='cls-2'%20d='m1081.12,1563.69l98.33,40.07h-606.88s-44.81-18.6-75.32-40.07h583.88Z'/%3e%3cpath%20class='cls-2'%20d='m881.51,1346.9H232.67s-16.8-11.81-52.44-86.57h658.37'/%3e%3cpath%20class='cls-2'%20d='m918.74,1411.29H285.11s-27.65-24.33-40.05-44.36h637.45'/%3e%3cpath%20class='cls-2'%20d='m979.78,1481.41H371.4s-31.94-12.88-59.12-41.5h624.11'/%3e%3cpath%20class='cls-2'%20d='m1058.85,1542.22H463.89s-42.91-20.75-67.7-40.78h604.5'/%3e%3c/svg%3e" type="image/x-icon">
     <link rel="shortcut icon" href="./assets/compiled/png/favicon.png" type="image/png">
-    
+    
+
   <link rel="stylesheet" crossorigin href="./assets/compiled/css/app.css">
   <link rel="stylesheet" crossorigin href="./assets/compiled/css/app-dark.css">
+  <link rel="stylesheet" crossorigin href="./assets/compiled/css/iconly.css">
 </head>
 
 <body>
@@ -61,7 +63,7 @@
             <li class="sidebar-title">Menu</li>
             
             <li
-                class="sidebar-item  ">
+                class="sidebar-item active ">
                 <a href="index.html" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Main Menu</span>
@@ -690,7 +692,7 @@
             </li>
             
             <li
-                class="sidebar-item active ">
+                class="sidebar-item  ">
                 <a href="application-chat.html" class='sidebar-link'>
                     <i class="bi bi-chat-dots-fill"></i>
                     <span>Chat Application</span>
@@ -845,43 +847,308 @@
             </header>
             
 <div class="page-heading">
-    <div class="page-title">
-        <div class="row">
-            <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Chat Application</h3>
-                <p class="text-subtitle text-muted">An application for user to check Chat inbox.</p>
+    <h3>Test</h3>
+</div> 
+<div class="page-content"> 
+    <section class="row">
+        <div class="col-12 col-lg-9">
+            <div class="row">
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon purple mb-2">
+                                        <i class="iconly-boldShow"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Profile Views</h6>
+                                    <h6 class="font-extrabold mb-0">112.000</h6>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card"> 
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon blue mb-2">
+                                        <i class="iconly-boldProfile"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Followers</h6>
+                                    <h6 class="font-extrabold mb-0">183.000</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon green mb-2">
+                                        <i class="iconly-boldAdd-User"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Following</h6>
+                                    <h6 class="font-extrabold mb-0">80.000</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon red mb-2">
+                                        <i class="iconly-boldBookmark"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Saved Post</h6>
+                                    <h6 class="font-extrabold mb-0">112</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 order-md-2 order-first">
-                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Chat Application</li>
-                    </ol>
-                </nav>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Profile Visit</h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="chart-profile-visit"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Profile Visit</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="d-flex align-items-center">
+                                        <svg class="bi text-primary" width="32" height="32" fill="blue"
+                                            style="width:10px">
+                                            <use
+                                                xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+                                        </svg>
+                                        <h5 class="mb-0 ms-3">Europe</h5>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <h5 class="mb-0 text-end">862</h5>
+                                </div>
+                                <div class="col-12">
+                                    <div id="chart-europe"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="d-flex align-items-center">
+                                        <svg class="bi text-success" width="32" height="32" fill="blue"
+                                            style="width:10px">
+                                            <use
+                                                xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+                                        </svg>
+                                        <h5 class="mb-0 ms-3">America</h5>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <h5 class="mb-0 text-end">375</h5>
+                                </div>
+                                <div class="col-12">
+                                    <div id="chart-america"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="d-flex align-items-center">
+                                        <svg class="bi text-success" width="32" height="32" fill="blue"
+                                            style="width:10px">
+                                            <use
+                                                xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+                                        </svg>
+                                        <h5 class="mb-0 ms-3">India</h5>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <h5 class="mb-0 text-end">625</h5>
+                                </div>
+                                <div class="col-12">
+                                    <div id="chart-india"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="d-flex align-items-center">
+                                        <svg class="bi text-danger" width="32" height="32" fill="blue"
+                                            style="width:10px">
+                                            <use
+                                                xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+                                        </svg>
+                                        <h5 class="mb-0 ms-3">Indonesia</h5>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <h5 class="mb-0 text-end">1025</h5>
+                                </div>
+                                <div class="col-12">
+                                    <div id="chart-indonesia"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Latest Comments</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-lg">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-md">
+                                                        <img src="./assets/compiled/jpg/5.jpg">
+                                                    </div>
+                                                    <p class="font-bold ms-3 mb-0">Si Cantik</p>
+                                                </div>
+                                            </td>
+                                            <td class="col-auto">
+                                                <p class=" mb-0">Congratulations on your graduation!</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-md">
+                                                        <img src="./assets/compiled/jpg/2.jpg">
+                                                    </div>
+                                                    <p class="font-bold ms-3 mb-0">Si Ganteng</p>
+                                                </div>
+                                            </td>
+                                            <td class="col-auto">
+                                                <p class=" mb-0">Wow amazing design! Can you make another tutorial for
+                                                    this design?</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-md">
+                                                        <img src="./assets/compiled/jpg/8.jpg">
+                                                    </div>
+                                                    <p class="font-bold ms-3 mb-0">Singh Eknoor</p>
+                                                </div>
+                                            </td>
+                                            <td class="col-auto">
+                                                <p class=" mb-0">What a stunning design! You are so talented and creative!</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-md">
+                                                        <img src="./assets/compiled/jpg/3.jpg">
+                                                    </div>
+                                                    <p class="font-bold ms-3 mb-0">Rani Jhadav</p>
+                                                </div>
+                                            </td>
+                                            <td class="col-auto">
+                                                <p class=" mb-0">I love your design! It’s so beautiful and unique! How did you learn to do this?</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <section class="section">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Coming Soon!</h5>
+        <div class="col-12 col-lg-3">
+            <div class="card">
+                <div class="card-body py-4 px-4">
+                    <div class="d-flex align-items-center">
+                        <div class="avatar avatar-xl">
+                            <img src="./assets/compiled/jpg/1.jpg" alt="Face 1">
+                        </div>
+                        <div class="ms-3 name">
+                            <h5 class="font-bold">John Duck</h5>
+                            <h6 class="text-muted mb-0">@johnducky</h6>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p>
-                            While you wait, you can use the 
-                            <a href="ui-widgets-chatbox.html">chatbox widget.</a>
-                        </p>
-                        <p>
-                            If you want to contribute, check out our
-                            <a
-                                href="https://github.com/zuramai/mazer"
-                                target="_blank">
-                                template repository
-                            </a>.
-                        </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4>Recent Messages</h4>
+                </div>
+                <div class="card-content pb-4">
+                    <div class="recent-message d-flex px-4 py-3">
+                        <div class="avatar avatar-lg">
+                            <img src="./assets/compiled/jpg/4.jpg">
+                        </div>
+                        <div class="name ms-4">
+                            <h5 class="mb-1">Hank Schrader</h5>
+                            <h6 class="text-muted mb-0">@johnducky</h6>
+                        </div>
                     </div>
+                    <div class="recent-message d-flex px-4 py-3">
+                        <div class="avatar avatar-lg">
+                            <img src="./assets/compiled/jpg/5.jpg">
+                        </div>
+                        <div class="name ms-4">
+                            <h5 class="mb-1">Dean Winchester</h5>
+                            <h6 class="text-muted mb-0">@imdean</h6>
+                        </div>
+                    </div>
+                    <div class="recent-message d-flex px-4 py-3">
+                        <div class="avatar avatar-lg">
+                            <img src="./assets/compiled/jpg/1.jpg">
+                        </div>
+                        <div class="name ms-4">
+                            <h5 class="mb-1">John Dodol</h5>
+                            <h6 class="text-muted mb-0">@dodoljohn</h6>
+                        </div>
+                    </div>
+                    <div class="px-4">
+                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Start Conversation</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="card">
+                <div class="card-header">
+                    <h4>Visitors Profile</h4>
+                </div>
+                <div class="card-body">
+                    <div id="chart-visitors-profile"></div>
                 </div>
             </div>
         </div>
@@ -909,7 +1176,10 @@
     
 
     
-	
+<!-- Need: Apexcharts -->
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/static/js/pages/dashboard.js"></script>
+
 </body>
 
 </html>
