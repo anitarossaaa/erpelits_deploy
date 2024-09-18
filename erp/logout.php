@@ -4,7 +4,7 @@ session_unset();
 session_destroy();
  
 if (!isset($_SESSION['username'])) {
-    header("Location: auth-login.php");
+    header("Location: ../");
     exit(); // Terminate script execution after the redirect
 }
 ?>
