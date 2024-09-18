@@ -1,3 +1,11 @@
+<?php
+session_start();
+ 
+if (!isset($_SESSION['username'])) {
+    header("Location: auth-login.php");
+    exit(); // Terminate script execution after the redirect
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +32,7 @@
     <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
             <div class="logo">
-                <a href="index.html"><img src="./assets/compiled/png/logo.png" alt="Logo" srcset=""></a>
+                <a href="index.php"><img src="./assets/compiled/png/logo.png" alt="Logo" srcset=""></a>
             </div>
             <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
@@ -65,7 +73,7 @@
             
             <li
                 class="sidebar-item active ">
-                <a href="index.html" class='sidebar-link'>
+                <a href="index.php" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Main Menu</span>
                 </a>
@@ -864,7 +872,7 @@
 								<div class="col-9 ms-3 name">
 									<h5 class="font-bold">Anita R.</h5>
 									<h6 class="text-muted mb-0">anitarossaaa@gmail.com</h6>
-									<a href="#"> 
+									<a href="logout.php"> 
 										<p class="mt-3 mb-0">Edit Profile <span class="fa-fw select-all fas"></span></p>
 									</a>
 								</div>
@@ -992,7 +1000,7 @@
                         <div class="col-9 ms-3 name">
                             <h5 class="font-bold">Anita R.</h5>
                             <h6 class="text-muted mb-0">anitarossaaa@gmail.com</h6>
-							<a href="#"> 
+							<a href="logout.php"> 
 								<p class="mt-3 mb-0">Edit Profile <span class="fa-fw select-all fas"></span></p>
 							</a>
                         </div>

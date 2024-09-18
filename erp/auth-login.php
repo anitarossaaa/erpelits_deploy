@@ -1,10 +1,31 @@
+<?php
+include 'config.php';
+session_start();
+
+if (isset($_POST['submit'])) {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = hash('sha256', $_POST['password']); // Hash the input password using SHA-256
+ 
+    $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+ 
+    if ($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header("Location: index.php");
+        exit();
+    } else {
+        echo "<script>alert('Email atau password Anda salah. Silakan coba lagi!')</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Mazer Admin Dashboard</title>
+    <title>Login - Mazer Admin Dashboard</title>
     <link rel="shortcut icon" href="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Layer_1'%20data-name='Layer%201'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202000%202000'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20%23fff;%20}%20.cls-2%20{%20fill:%20%23321fb3;%20}%20.cls-3%20{%20fill:%20%23fc040c;%20}%20%3c/style%3e%3c/defs%3e%3ccircle%20class='cls-1'%20cx='1000'%20cy='1000'%20r='978.54'/%3e%3crect%20class='cls-3'%20x='851.98'%20y='908.87'%20width='1024.96'%20height='183.16'/%3e%3cpath%20class='cls-3'%20d='m851.98,1114.92s9.13,80.13,28.08,114.47h301.87s-20.36-54.37-29.49-114.47h-300.47Z'/%3e%3cpath%20class='cls-3'%20d='m891.3,1256.58s23.87,55.81,46.33,87.29h346.8s-49.14-17.17-92.67-87.29h-300.47Z'/%3e%3cpath%20class='cls-3'%20d='m947.46,1363.9h853.67s-12.64,33.63-28.08,47.22h-793.29s-22.07-25.26-32.29-47.22Z'/%3e%3cpath%20class='cls-3'%20d='m993.79,1424.71h765.21s-23.87,35.06-45.63,46.5h-675.35s-24.57-8.59-44.23-46.5Z'/%3e%3cpath%20class='cls-3'%20d='m1072.42,1495.54h622.7s-63.88,41.85-82.84,43.64h-470.36s-33-7.87-69.5-43.64Z'/%3e%3cpath%20class='cls-3'%20d='m1163.68,1547.05h435.96s-193.41,88.7-435.96,0Z'/%3e%3cpath%20class='cls-3'%20d='m1558.57,1256.58h301.17s-22.82,59.74-50.55,87.29h-326.44s50.2-23.25,75.82-87.29Z'/%3e%3cpath%20class='cls-3'%20d='m1159.47,875.96h-303.28s2.11-53.3,30.19-114.11h296.26s-17.9,35.41-23.17,114.11Z'/%3e%3cpath%20class='cls-3'%20d='m894.81,739.67h301.17s46.68-65.11,105.3-86.57h-359.44s-21.49,19.04-47.04,86.57Z'/%3e%3cpath%20class='cls-3'%20d='m952.37,633.06h827.69s-14.39-33.98-30.89-44.36h-765.21s-6.71,5.72-31.59,44.36Z'/%3e%3cpath%20class='cls-3'%20d='m1008.53,560.09h719.58s-12.64-22.89-40.02-41.5h-632.53s-31.24,20.03-47.04,41.5Z'/%3e%3cpath%20class='cls-3'%20d='m1075.93,498.56h576.37s-32.64-29.69-67.39-40.78h-438.77s-34.71,9.96-70.2,40.78Z'/%3e%3cpath%20class='cls-3'%20d='m1195.98,436.31h338.38s-153.74-90.15-338.38,0Z'/%3e%3cpath%20class='cls-3'%20d='m1449.41,653.1h343.53s26.68,23.73,41.19,86.57h-280.34s-48.91-62.84-104.37-86.57Z'/%3e%3cpath%20class='cls-3'%20d='m1565.48,761.84h275.66s26.91,55.21,31.36,112.92h-274.73s-20.59-90.74-32.29-112.92Z'/%3e%3cpolyline%20class='cls-2'%20points='800.02%20908.87%20800.02%201092.02%20123.06%201092.02%20123.06%20908.87'/%3e%3cpath%20class='cls-2'%20d='m831.02,761.84c-27.65,53.12-32.42,114.11-32.42,114.11H128.31l702.71-114.11Z'/%3e%3cpath%20class='cls-3'%20d='m836.25,739.67l42.91-86.57s-21.6,21.77-42.91,86.57Z'/%3e%3cpath%20class='cls-3'%20d='m880.16,633.06l36.23-44.36s-26.7,24.33-36.23,44.36Z'/%3e%3cpath%20class='cls-3'%20d='m934.04,560.09l43.38-41.5s-24.31,12.88-43.38,41.5Z'/%3e%3cpath%20class='cls-3'%20d='m998.34,498.56l58.16-40.78s-32.67,12.96-58.16,40.78Z'/%3e%3cpath%20class='cls-3'%20d='m1075.93,436.31l98.33-40.07s-60.95,9.56-98.33,40.07Z'/%3e%3cpath%20class='cls-2'%20d='m831.02,761.84H167.39s-33.83,51.54-39.08,114.11'/%3e%3cpath%20class='cls-2'%20d='m1078.77,436.31l98.33-40.07h-606.88s-44.81,18.6-75.32,40.07h583.88Z'/%3e%3cpath%20class='cls-2'%20d='m879.16,653.1H230.32s-16.8,11.81-52.44,86.57h658.37'/%3e%3cpath%20class='cls-2'%20d='m916.4,588.71H282.76s-27.65,24.33-40.05,44.36h637.45'/%3e%3cpath%20class='cls-2'%20d='m977.43,518.59H369.05s-31.94,12.88-59.12,41.5h624.11'/%3e%3cpath%20class='cls-2'%20d='m1056.5,457.78H461.54s-42.91,20.75-67.7,40.78h604.5'/%3e%3cpath%20class='cls-2'%20d='m833.36,1238.16c-27.65-53.12-32.42-114.11-32.42-114.11H130.66l702.71,114.11Z'/%3e%3cpath%20class='cls-2'%20d='m833.36,1238.16H169.74s-33.83-51.54-39.08-114.11'/%3e%3cpath%20class='cls-2'%20d='m1081.12,1563.69l98.33,40.07h-606.88s-44.81-18.6-75.32-40.07h583.88Z'/%3e%3cpath%20class='cls-2'%20d='m881.51,1346.9H232.67s-16.8-11.81-52.44-86.57h658.37'/%3e%3cpath%20class='cls-2'%20d='m918.74,1411.29H285.11s-27.65-24.33-40.05-44.36h637.45'/%3e%3cpath%20class='cls-2'%20d='m979.78,1481.41H371.4s-31.94-12.88-59.12-41.5h624.11'/%3e%3cpath%20class='cls-2'%20d='m1058.85,1542.22H463.89s-42.91-20.75-67.7-40.78h604.5'/%3e%3c/svg%3e" type="image/x-icon">
     <link rel="shortcut icon" href="./assets/compiled/png/favicon.png" type="image/png">
   <link rel="stylesheet" crossorigin href="./assets/compiled/css/app.css">
@@ -22,45 +43,40 @@
             <div class="auth-logo">
                 <a href="index.php"><img src="./assets/compiled/png/logo.png" alt="Logo"></a>
             </div>
-            <h1 class="auth-title">Sign Up</h1>
-            <p class="auth-subtitle mb-5">Input your data to register to our website.</p>
+            <h1 class="auth-title">Log in.</h1>
+            <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
 
-            <form action="index.php">
+            <form action="" method="POST">
                 <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="text" class="form-control form-control-xl" placeholder="Email">
-                    <div class="form-control-icon">
-                        <i class="bi bi-envelope"></i>
-                    </div>
-                </div>
-                <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="text" class="form-control form-control-xl" placeholder="Username">
+                    <input name="username" type="text" class="form-control form-control-xl" placeholder="Username">
                     <div class="form-control-icon">
                         <i class="bi bi-person"></i>
                     </div>
                 </div>
                 <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="password" class="form-control form-control-xl" placeholder="Password">
+                    <input name="password" type="password" class="form-control form-control-xl" placeholder="Password">
                     <div class="form-control-icon">
                         <i class="bi bi-shield-lock"></i>
                     </div>
                 </div>
-                <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="password" class="form-control form-control-xl" placeholder="Confirm Password">
-                    <div class="form-control-icon">
-                        <i class="bi bi-shield-lock"></i>
-                    </div>
+                <div class="form-check form-check-lg d-flex align-items-end">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label text-gray-600" for="flexCheckDefault">
+                        Keep me logged in
+                    </label>
                 </div>
-                <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Sign Up</button>
+                <button name="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
             </form>
             <div class="text-center mt-5 text-lg fs-4">
-                <p class='text-gray-600'>Already have an account? <a href="auth-login.html" class="font-bold">Log
-                        in</a>.</p>
+                <p class="text-gray-600">Don't have an account? <a href="auth-register.php" class="font-bold">Sign
+                        up</a>.</p>
+                <p><a class="font-bold" href="error-500.html">Forgot password?</a>.</p>
             </div>
         </div>
     </div>
     <div class="col-lg-7 d-none d-lg-block">
         <div id="auth-right">
-
+			
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Enterprise Hub</title>
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/icon%20ELI%20fav%20icon%20srgb-02.png">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/icon%20ELI%20fav%20icon%20srgb-02.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
                     <h1 class="text-center text-lg-start" style="font-weight: 1000;">Welcome to Enterprise Hub</h1>
                     <p class="text-center text-lg-start" style="font-weight: 100;font-family: Poppins, sans-serif;">Enterprise Resource Planning System <br>for manage all things together.</p>
                     <div class="row d-xl-flex">
-                        <div class="col d-flex justify-content-center justify-content-lg-start"><a class="btn btn-light btn-lg" role="button" href="login.html">Login</a><a class="btn btn-outline-light btn-lg" role="button" href="login.html">Register</a></div>
+                        <div class="col d-flex justify-content-center justify-content-lg-start"><a class="btn btn-light btn-lg" role="button" href="./erp/auth-login.php">Login</a><a class="btn btn-outline-light btn-lg" role="button" href="./erp/auth-register.php">Register</a></div>
                     </div>
                 </div>
                 <div class="col bg-image-desktop"><img src="assets/img/image%20landing%20page-02.png" style="width: 80%;"></div>
